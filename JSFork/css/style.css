@@ -1,0 +1,42 @@
+
+html, body {
+  width: 100%;
+  height:100%;
+  padding:0;
+  margin:0;
+}
+
+#container {
+  display:block;
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+}
+
+.backgroundContainer {
+  width:33.3333%;
+  height:100%;
+  float:left;
+  padding:0;
+  background-color:#000000;
+  margin:0;
+}
+.background {
+  background-color: #00bfff;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+#first {
+  background-color: #000;
+}
+
+#second {
+  background-color: #0000FF;
+}
+
+#third {
+  background-color: #FF0000;
+}
