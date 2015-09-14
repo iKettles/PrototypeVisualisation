@@ -3,8 +3,7 @@
         "timestamp": "2015-09-02T00:00:00.000Z",
         "city": "Bangalore",
         "temperature": 27.84971135,
-        "light":
- "26.71872695",
+        "light": "26.71872695",
         "airquality_raw": "34.02853732",
         "sound": "1610.618539",
         "humidity": 55.02679886,
@@ -14,8 +13,7 @@
         "timestamp": "2015-09-02T01:00:00.000Z",
         "city": "Bangalore",
         "temperature": 28.02314185,
-        "light":
- "788.1173514",
+        "light": 788.1173514,
         "airquality_raw": "35.22472994",
         "sound": "1677.72149",
         "humidity": 54.60624593,
@@ -25,8 +23,7 @@
         "timestamp": "2015-09-02T02:00:00.000Z",
         "city": "Bangalore",
         "temperature": 28.82086319,
-        "light":
- "2072.106313",
+        "light": 2072.106313,
         "airquality_raw": "35.9814438",
         "sound": "1663.67396",
         "humidity": 51.9825142,
@@ -36,8 +33,7 @@
         "timestamp": "2015-09-02T03:00:00.000Z",
         "city": "Bangalore",
         "temperature": 30.29328238,
-        "light":
- "3504.703383",
+        "light": 3504.703383,
         "airquality_raw": "34.10115835",
         "sound": "1449.560147",
         "humidity": 47.59601773,
@@ -47,8 +43,7 @@
         "timestamp": "2015-09-02T04:00:00.000Z",
         "city": "Bangalore",
         "temperature": 31.85179435,
-        "light":
- "5264.755301",
+        "light": 5264.755301,
         "airquality_raw": "33.86527921",
         "sound": "1481.224424",
         "humidity": 43.52057931,
@@ -58,8 +53,7 @@
         "timestamp": "2015-09-02T05:00:00.000Z",
         "city": "Bangalore",
         "temperature": 33.48526887,
-        "light":
- "4635.649567",
+        "light": 4635.649567,
         "airquality_raw": "36.70278179",
         "sound": "1685.467178",
         "humidity": 39.32156814,
@@ -69,8 +63,7 @@
         "timestamp": "2015-09-02T06:00:00.000Z",
         "city": "Bangalore",
         "temperature": 35.03185314,
-        "light":
- "5400.263874",
+        "light": 5400.263874,
         "airquality_raw": "34.89584024",
         "sound": "1753.389239",
         "humidity": 36.39324804,
@@ -80,8 +73,7 @@
         "timestamp": "2015-09-02T07:00:00.000Z",
         "city": "Bangalore",
         "temperature": 34.83577913,
-        "light":
- "9941.46241",
+        "light": 9941.46241,
         "airquality_raw": "27.7380319",
         "sound": "1548.392888",
         "humidity": 36.02035888,
@@ -91,8 +83,7 @@
         "timestamp": "2015-09-02T08:00:00.000Z",
         "city": "Bangalore",
         "temperature": 35.42306595,
-        "light":
- "12320.09268",
+        "light": 12320.09268,
         "airquality_raw": "27.35115349",
         "sound": "1761.881413",
         "humidity": 34.49994393,
@@ -102,8 +93,7 @@
         "timestamp": "2015-09-02T09:00:00.000Z",
         "city": "Bangalore",
         "temperature": 36.19063585,
-        "light":
- "12422.79132",
+        "light": 12422.79132,
         "airquality_raw": "27.6806652",
         "sound": "1628.840556",
         "humidity": 32.45291458,
@@ -113,8 +103,7 @@
         "timestamp": "2015-09-02T10:00:00.000Z",
         "city": "Bangalore",
         "temperature": 35.12828682,
-        "light":
- "8392.145408",
+        "light": 8392.145408,
         "airquality_raw": "27.04937551",
         "sound": "1545.728656",
         "humidity": 33.09722255,
@@ -124,8 +113,7 @@
         "timestamp": "2015-09-02T11:00:00.000Z",
         "city": "Bangalore",
         "temperature": 34.63122683,
-        "light":
- "9741.797454",
+        "light": 9741.797454,
         "airquality_raw": "25.51072348",
         "sound": "1406.657529",
         "humidity": 32.80816614,
@@ -135,8 +123,7 @@
         "timestamp": "2015-09-02T12:00:00.000Z",
         "city": "Bangalore",
         "temperature": 33.40800985,
-        "light":
- "1047.203954",
+        "light": 1047.203954,
         "airquality_raw": "29.36020043",
         "sound": "1521.180917",
         "humidity": 33.6157973,
@@ -146,8 +133,7 @@
         "timestamp": "2015-09-02T13:00:00.000Z",
         "city": "Bangalore",
         "temperature": 32.7139646,
-        "light":
- "5.977817253",
+        "light": 5.977817253,
         "airquality_raw": "39.5105981",
         "sound": "1602.09194",
         "humidity": 35.50742966,
@@ -157,8 +143,7 @@
         "timestamp": "2015-09-02T14:00:00.000Z",
         "city": "Bangalore",
         "temperature": 32.2593334,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "39.99932617",
         "sound": "1421.450516",
         "humidity": 37.01471522,
@@ -168,8 +153,7 @@
         "timestamp": "2015-09-02T15:00:00.000Z",
         "city": "Bangalore",
         "temperature": 31.82227786,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "39.70977758",
         "sound": "1471.279939",
         "humidity": 39.2376433,
@@ -179,8 +163,7 @@
         "timestamp": "2015-09-02T16:00:00.000Z",
         "city": "Bangalore",
         "temperature": 31.34331873,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "35.61093245",
         "sound": "1619.91488",
         "humidity": 41.13074482,
@@ -190,8 +173,7 @@
         "timestamp": "2015-09-02T17:00:00.000Z",
         "city": "Bangalore",
         "temperature": 30.92836138,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "29.9082269",
         "sound": "1523.012066",
         "humidity": 42.0140414,
@@ -201,8 +183,7 @@
         "timestamp": "2015-09-02T18:00:00.000Z",
         "city": "Bangalore",
         "temperature": 30.16988263,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "26.5469036",
         "sound": "1457.678005",
         "humidity": 45.34981516,
@@ -212,8 +193,7 @@
         "timestamp": "2015-09-02T19:00:00.000Z",
         "city": "Bangalore",
         "temperature": 29.77382787,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "25.90904038",
         "sound": "1475.385783",
         "humidity": 47.32324802,
@@ -223,8 +203,7 @@
         "timestamp": "2015-09-02T20:00:00.000Z",
         "city": "Bangalore",
         "temperature": 29.44517093,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "24.70066297",
         "sound": "1338.352541",
         "humidity": 47.27513163,
@@ -234,8 +213,7 @@
         "timestamp": "2015-09-02T21:00:00.000Z",
         "city": "Bangalore",
         "temperature": 28.78750736,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "25.9588009",
         "sound": "1524.666993",
         "humidity": 49.72413099,
@@ -245,8 +223,7 @@
         "timestamp": "2015-09-02T22:00:00.000Z",
         "city": "Bangalore",
         "temperature": 28.31591085,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "25.6585894",
         "sound": "1479.905816",
         "humidity": 53.26847631,
@@ -256,8 +233,7 @@
         "timestamp": "2015-09-02T23:00:00.000Z",
         "city": "Bangalore",
         "temperature": 27.72467809,
-        "light":
- "0",
+        "light": 0,
         "airquality_raw": "26.80600037",
         "sound": "1585.157728",
         "humidity": 56.32880362,
