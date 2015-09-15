@@ -146,7 +146,7 @@ function startAnim(data) {
       currentDataPoint = 0;
     } else {
       var currentTime =  new Date(data[currentDataPoint].timestamp)
-      $('#time').text(currentTime.getUTCHours()+':0'+currentTime.getUTCMinutes()+':0'+currentTime.getUTCSeconds());
+      $('#time').text(currentTime.getUTCHours()+':0'+currentTime.getUTCMinutes()+':0'+currentTime.getUTCSeconds()+' - '+data[currentDataPoint].humidity);
       console.log(data[currentDataPoint].timestamp)
       updateImages(data[currentDataPoint]);
       currentDataPoint++;
