@@ -24,7 +24,7 @@ html, body {
 
 .backgroundContainer {
   width:100%;
-  height:33.33333333%;
+  height:33.33333333333%;
   padding:0;
   background-color:#000000;
   margin:0;
@@ -39,6 +39,24 @@ html, body {
   background-position: top center; 
   background-size: cover;
   overflow:hidden;
+}
+
+.backgroundTop {
+  position: relative;
+  z-index: 0
+}
+
+.container {
+  position: absolute;
+  z-index: 2;
+}
+
+.backgroundBottom {
+  z-index: -1;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 #first {

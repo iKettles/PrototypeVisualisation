@@ -22,6 +22,25 @@ var backgroundPool = {
     "colour" : "#5b8295"
   }
 };
+
+var buildingPool = {
+  "slums": {
+    "morning" : "buildings/slums/morning.png",
+    "afternoon" : "buildings/slums/afternoon.png",
+    "night" : "buildings/slums/night.png"
+  },
+  "middle": {
+    "morning" : "buildings/middle/morning.png",
+    "afternoon" : "buildings/middle/afternoon.png",
+    "night" : "buildings/middle/night.png"
+  },
+  "highrise": {
+    "morning" : "buildings/highrise/morning.png",
+    "afternoon" : "buildings/highrise/afternoon.png",
+    "night" : "buildings/highrise/night.png"
+  }
+};
+
 var characterPool = {
   1 : {
     "prefix" : 1,
@@ -93,12 +112,11 @@ function grabData(callback) {
 
 $(function() {
   grabData(function(data) {
-    $.each( data, function( key, dataPoint ) {
+    $.each(data, function(key, dataPoint) {
       var tempPercentage = null;
       var humidityPecentage = null;
       for(var i = 0; i < temperaturePercentile.length; i++) {
         var result = calculatePercentile(dataPoint.temperature, i, temperaturePercentile[i], temperaturePercentile[i+1]);
-        //console.log('Temperature result is '+result);
         if(result !== false) {
           tempPercentage = result;
           break;
@@ -111,7 +129,6 @@ $(function() {
           break;
         }
       }
-      //console.log('Factor is '+((tempPercentage+humidityPecentage)/2));
       dataPoint.heatFactor = ((tempPercentage+humidityPecentage)/2);
       dataPoint.heatThreshold = calculateThreshold(thresholds.heatFactor, dataPoint.heatFactor);
       dataPoint.timeOfDay = calculateTimeThreshold(thresholds.time, dataPoint.timestamp);
@@ -148,15 +165,24 @@ function restart() {
 }
 
 function updateImages(dataPoint) {
-  //$('.background').css('background-image', "url('"+folderPrefix+backgroundPool[dataPoint.timeOfDay]+"')");
   if(dataPoint.timeOfDay !== currentTimeOfDay) {
     currentTimeOfDay = dataPoint.timeOfDay;
-    $('.background').css('background-color', backgroundPool[dataPoint.timeOfDay].colour);
-    $('.background').fadeTo('slow', 0.3, function()
-    {
-        $(this).css('background-image', "url('"+folderPrefix+backgroundPool[dataPoint.timeOfDay].image+"')");
-    }).fadeTo('slow', 1);
+    $(".backgroundBottom").css("opacity", 0);
+    changeImage('.backgroundBottom', folderPrefix+backgroundPool[dataPoint.timeOfDay].image);
+    changeBackground();
+    function changeBackground() {
+      $('.backgroundBottom')
+        .animate({"opacity": 1}, 500, function(){
+          changeImage('.backgroundTop', folderPrefix+backgroundPool[dataPoint.timeOfDay].image);
+          $(".backgroundBottom").css("opacity", 0);
+          changeImage('.backgroundBottom', folderPrefix+backgroundPool[dataPoint.timeOfDay].image);
+      });
+    }
   }
+}
+
+function changeImage(id, image){
+  $(id).css('background-image', 'url('+image+')');
 }
 
 function calculateTimeThreshold(threshold, timestamp) {
@@ -194,4 +220,7 @@ function calculatePercentile(value, index, current, next) {
     return false;
   }
 }
+
+
+
 
