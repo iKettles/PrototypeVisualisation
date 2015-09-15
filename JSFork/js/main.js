@@ -141,23 +141,17 @@ $(function() {
 
 function startAnim(data) {
   var currentDataPoint = 0;
-  updateImages(data[currentDataPoint]);
-  currentDataPoint++;
-  setTimeout(function(){ 
-    var refreshIntervalId = setInterval(function(){ 
-      if(currentDataPoint == (data.length)) {
-        clearInterval(refreshIntervalId);
-        restart();
-        console.log('stopped');
-      } else {
-        
-        console.log(data[currentDataPoint].timestamp)
-        updateImages(data[currentDataPoint]);
-        currentDataPoint++;
-      }
-      
-    }, 1000);
-  }, 1000);  
+  var refreshIntervalId = setInterval(function(){ 
+    if(currentDataPoint == (data.length)) {
+      currentDataPoint = 0;
+    } else {
+      var currentTime =  new Date(data[currentDataPoint].timestamp)
+      $('#time').text(currentTime.getUTCHours()+':0'+currentTime.getUTCMinutes()+':0'+currentTime.getUTCSeconds());
+      console.log(data[currentDataPoint].timestamp)
+      updateImages(data[currentDataPoint]);
+      currentDataPoint++;
+    }
+  }, 1000);
 }
 
 function restart() {
@@ -170,17 +164,37 @@ function updateImages(dataPoint) {
     $(".backgroundBottom").css("opacity", 0);
     changeImage('.backgroundBottom', folderPrefix+backgroundPool[dataPoint.timeOfDay].image);
     changeBackground(dataPoint.timeOfDay);
-    
   }
 }
 
+function changeBuilding(section, timeOfDay) {
+  $('#'+section+' .buildingContainerBottom')
+    .animate({"opacity": 1}, 500, function(){
+      changeImage('#'+section+' .buildingContainer', folderPrefix+buildingPool[section][timeOfDay]);
+      $('#'+section+' .buildingContainerBottom').css('opacity', 0);
+      changeImage('#'+section+' .buildingContainerBottom', folderPrefix+buildingPool[section][timeOfDay]);
+  });
+}
+
+
 function changeBackground(timeOfDay) {
   $('.backgroundBottom')
-    .animate({"opacity": 1}, 500, function(){
+    .animate({"opacity": 1}, 1500, function(){
       changeImage('.backgroundTop', folderPrefix+backgroundPool[timeOfDay].image);
       $(".backgroundBottom").css("opacity", 0);
-      changeImage('.backgroundBottom', folderPrefix+backgroundPool[timeOfDay].image);
+      changeImage('.backgroundBottom', folderPrefix+backgroundPool[timeOfDay].image);      
   });
+  $("#highrise .buildingContainerBottom").css("opacity", 0);
+  changeImage('#highrise .buildingContainerBottom', folderPrefix+buildingPool.highrise[timeOfDay]);
+  changeBuilding('highrise', timeOfDay);
+      
+  $("#middle .buildingContainerBottom").css("opacity", 0);
+  changeImage('#middle .buildingContainerBottom', folderPrefix+buildingPool.middle[timeOfDay]);
+  changeBuilding('middle', timeOfDay);
+
+  $("#slums .buildingContainerBottom").css("opacity", 0);
+  changeImage('#slums .buildingContainerBottom', folderPrefix+buildingPool.slums[timeOfDay]);
+  changeBuilding('slums', timeOfDay);
 }
 
 function changeImage(id, image){

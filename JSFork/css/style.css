@@ -23,9 +23,8 @@ html, body {
 }
 
 .backgroundContainer {
-  width:33.33333333333%;
-  height:100%;
-  float:left;
+  width:100%;
+  height:33.33333333333%;
   padding:0;
   background-color:#000000;
   margin:0;
@@ -49,7 +48,9 @@ html, body {
 
 .container {
   position: absolute;
-  z-index: 2;
+  z-index: 500;
+  width:100%;
+  height:100%;
 }
 
 .backgroundBottom {
@@ -60,15 +61,63 @@ html, body {
   width: 100%;
 }
 
-#first {
-  
+.buildingContainer {
+  width: 100%;
+  height: 70%;
+  background-repeat: no-repeat;
+  background-position: bottom center; 
+  background-size: contain;
+  overflow:hidden;
+  position:relative;
+  display:block;
+  top:10%;
+  z-index:1000;
+}
+
+.buildingContainerBottom {
+  z-index: 999;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center; 
+  background-size: contain;
+  overflow:hidden;
+}
+
+.characterContainer {
+  position:absolute;
+  z-index:1001;
+  width:100%;
+  bottom:0;
+  display:inline;
+}
+
+.characterContainer > img {
+  height:100%;
+  width:auto;
+
+}
+
+#time {
+  font-weight:bold;
+  font-size:2em;
+  position:absolute;
+  bottom:0;
+  right: 0;
+  z-index:5000;
+  padding:0.25em;
+}
+
+#highrise {
+
+}
+
+#middle {
   
 }
 
-#second {
-  
-}
-
-#third {
+#slums {
   
 }
