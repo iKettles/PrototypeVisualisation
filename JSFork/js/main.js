@@ -169,17 +169,19 @@ function updateImages(dataPoint) {
     currentTimeOfDay = dataPoint.timeOfDay;
     $(".backgroundBottom").css("opacity", 0);
     changeImage('.backgroundBottom', folderPrefix+backgroundPool[dataPoint.timeOfDay].image);
-    changeBackground();
-    function changeBackground() {
-      $('.backgroundBottom')
-        .animate({"opacity": 1}, 500, function(){
-          changeImage('.backgroundTop', folderPrefix+backgroundPool[dataPoint.timeOfDay].image);
-          $(".backgroundBottom").css("opacity", 0);
-          changeImage('.backgroundBottom', folderPrefix+backgroundPool[dataPoint.timeOfDay].image);
-      });
-    }
+    changeBackground(dataPoint.timeOfDay);
+    
   }
 }
+
+function changeBackground(timeOfDay) {
+      $('.backgroundBottom')
+        .animate({"opacity": 1}, 500, function(){
+          changeImage('.backgroundTop', folderPrefix+backgroundPool[timeOfDay].image);
+          $(".backgroundBottom").css("opacity", 0);
+          changeImage('.backgroundBottom', folderPrefix+backgroundPool[timeOfDay].image);
+      });
+    }
 
 function changeImage(id, image){
   $(id).css('background-image', 'url('+image+')');
